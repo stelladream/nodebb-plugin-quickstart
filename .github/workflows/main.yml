@@ -14,5 +14,5 @@ jobs:
           git remote -v
           #git pull origin master
           #cd /home/ubuntu/nodebb
-          $./nodebb build
-          $./nodebb restart
+          #./nodebb build
+          #./nodebb restart
