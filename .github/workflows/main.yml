@@ -14,7 +14,7 @@ jobs:
         git pull origin master
         npm install
 
-    - name: Rebuild and Restart NodeBB
+    - name: Restart NodeBB
       run: |
         cd /home/ubuntu/nodebb
         ./nodebb restart
