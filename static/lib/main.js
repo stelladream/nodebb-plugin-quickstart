@@ -23,5 +23,5 @@
  */
 
 $(document).ready(function () {
-	 console.log('hello stelladream');
+	 console.log('hello, nykim');
 });
