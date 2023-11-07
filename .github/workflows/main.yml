@@ -1,4 +1,4 @@
-name: NodeBB QuickStart Plugin
+name: NodeBB QuickStart Plugin CI/CD
 
 on:
   push:
@@ -11,6 +11,7 @@ jobs:
     - name: Pull latest source from GitHub repository
       run: |
           cd /home/ubuntu/nodebb/node_modules/nodebb-plugin-quickstart
+          git remote -v
           git pull origin master
           cd /home/ubuntu/nodebb
           ./nodebb build
