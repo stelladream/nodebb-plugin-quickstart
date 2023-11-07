@@ -18,5 +18,6 @@ jobs:
       run: |
         cd /home/ubuntu/nodebb
         ./nodebb stop
-        ./nodebb start
+        #./nodebb start
+        nohup ./nodebb start &
         ps -ef | grep node
