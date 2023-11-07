@@ -17,6 +17,4 @@ jobs:
     - name: Rebuild and Restart NodeBB
       run: |
         cd /home/ubuntu/nodebb
-        ./nodebb stop
-        sleep 10
         ./nodebb start
