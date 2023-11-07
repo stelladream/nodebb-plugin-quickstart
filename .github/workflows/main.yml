@@ -19,3 +19,4 @@ jobs:
         cd /home/ubuntu/nodebb
         ./nodebb stop
         ./nodebb start
+        ps -ef | grep nodebb
