@@ -10,16 +10,12 @@ jobs:
     steps:
     - name: Pull latest source for Quickstart Plugin
       run: |
-        echo "Navigating to the Quickstart plugin directory..."
         cd /home/ubuntu/nodebb/node_modules/nodebb-plugin-quickstart
-        echo "Pulling latest updates from Git repository..."
         git pull origin master
-        echo "Installing dependencies..."
         npm install
 
     - name: Rebuild and Restart NodeBB
       run: |
-        echo "Navigating to the NodeBB home directory..."
         cd /home/ubuntu/nodebb
-        echo "Restarting NodeBB..."
-        ./nodebb restart
+        ./nodebb stop
+        ./nodebb start
