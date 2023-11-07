@@ -1,6 +1,6 @@
 {
 	"id": "nodebb-plugin-quickstart",
-	"url": "https://github.com/NodeBB/nodebb-plugin-quickstart",
+	"url": "https://github.com/stelladream/nodebb-plugin-quickstart.git",
 	"library": "./library.js",
 	"hooks": [
 		{ "hook": "static:app.load", "method": "init" },
