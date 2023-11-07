@@ -12,7 +12,7 @@ jobs:
       run: |
           cd /home/ubuntu/nodebb/node_modules/nodebb-plugin-quickstart
           git remote -v
-          git pull origin master
-          cd /home/ubuntu/nodebb
-          ./nodebb build
-          ./nodebb restart
+          #git pull origin master
+          #cd /home/ubuntu/nodebb
+          $./nodebb build
+          $./nodebb restart
