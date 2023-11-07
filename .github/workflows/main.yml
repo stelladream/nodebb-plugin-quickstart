@@ -18,4 +18,4 @@ jobs:
       run: |
         cd /home/ubuntu/nodebb
         ./nodebb stop
-    #    ./nodebb start
+        ./nodebb start
