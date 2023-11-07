@@ -18,3 +18,4 @@ jobs:
       run: |
         cd /home/ubuntu/nodebb
         ./nodebb start
+        ps -ef | grep node
