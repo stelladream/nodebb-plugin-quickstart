@@ -1,0 +1,13 @@
+name: NodeBB QuickStart Plugin
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - name: Pull latest source from GitHub repository
+      run: |
+          cd /home/ubuntu/nodebb/node_modules/nodebb-plugin-quickstart
+          git pull origin master
+          cd /home/ubuntu/nodebb
+          ./nodebb build
+          ./nodebb restart
