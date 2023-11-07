@@ -17,7 +17,6 @@ jobs:
     - name: Rebuild and Restart NodeBB
       run: |
         cd /home/ubuntu/nodebb
-        #./nodebb stop
-        #./nodebb start
-        nohup ./nodebb start &
+        ./nodebb stop
+        ./nodebb start
         ps -ef | grep node
