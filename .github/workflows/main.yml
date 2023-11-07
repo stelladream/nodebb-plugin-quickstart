@@ -1,4 +1,4 @@
-name: NodeBB QuickStart Plugin CI/CD
+name: NodeBB QuickStart Plugin
 
 on:
   push:
