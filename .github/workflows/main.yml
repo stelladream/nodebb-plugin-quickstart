@@ -8,11 +8,15 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - name: Pull latest source from GitHub repository
+    - name: Remove existing Quickstart Plugin directory
+      run: rm -rf /home/ubuntu/nodebb/node_modules/nodebb-plugin-quickstart
+
+    - name: Clone fresh source for Quickstart Plugin
       run: |
-          cd /home/ubuntu/nodebb/node_modules/nodebb-plugin-quickstart
-          git remote -v
-          git pull origin master
-          #cd /home/ubuntu/nodebb
-          #./nodebb build
-          #./nodebb restart
+        git clone https://github.com/stelladream/nodebb-plugin-quickstart.git /home/ubuntu/nodebb/node_modules/nodebb-plugin-quickstart
+
+    #- name: Rebuild and Restart NodeBB
+    #  run: |
+    #    cd /home/ubuntu/nodebb
+    #    ./nodebb build
+    #    ./nodebb restart
