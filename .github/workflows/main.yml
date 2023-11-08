@@ -8,10 +8,11 @@ jobs:
   build:
     runs-on: self-hosted
     steps:          
-     - name: Pull latest source for Quickstart Plugin
+     - name: Clone latest source for Quickstart Plugin
        run: |
-        cd /home/ubuntu/nodebb/node_modules/nodebb-plugin-quickstart
-        git pull origin master       
+        cd /home/ubuntu/nodebb/node_modules
+        rm -rf nodebb-plugin-quickstart
+        git clone https://github.com/stelladream/nodebb-plugin-quickstart.git
 
      - name: Install plugin and restart NodeBB
        run: |
