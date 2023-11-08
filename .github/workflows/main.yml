@@ -7,15 +7,16 @@ on:
 jobs:
   build:
     runs-on: self-hosted
-    steps:
-    - name: Pull latest source for Quickstart Plugin
-      run: |
+    steps:          
+     - name: Pull latest source for Quickstart Plugin
+       run: |
         cd /home/ubuntu/nodebb/node_modules/nodebb-plugin-quickstart
-        git pull origin master
-        npm install
+        git pull origin master       
 
-    - name: Restart NodeBB
-      run: |
+     - name: install and restart NodeBB
+       run: |
         cd /home/ubuntu/nodebb
-        ./nodebb restart
+        ./nodebb stop
+         npm install nodebb-plugin-quickstart
+        ./nodebb start
         ps -ef | grep nodebb
