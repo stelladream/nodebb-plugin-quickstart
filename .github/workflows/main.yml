@@ -19,5 +19,5 @@ jobs:
         cd /home/ubuntu/nodebb
         ./nodebb stop
          npm install nodebb-plugin-quickstart
-        nohub ./nodebb start &
+        nohup ./nodebb start &
         ps -ef | grep nodebb
