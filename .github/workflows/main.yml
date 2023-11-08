@@ -13,7 +13,7 @@ jobs:
         cd /home/ubuntu/nodebb/node_modules/nodebb-plugin-quickstart
         git pull origin master       
 
-     - name: Install and restart NodeBB
+     - name: Install plugin and restart NodeBB
        run: |
         cd /home/ubuntu/nodebb
         ./nodebb stop
